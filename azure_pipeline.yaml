@@ -10,7 +10,7 @@ trigger:
 pr: none
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'self-hosted'
 #pool: self-hosted # If you are running self-hosted Azure DevOps Agents
 
 stages:
@@ -18,6 +18,6 @@ stages:
 - template: ./pipeline_templates/main_template.yaml
   parameters:
     serviceConnectionName: azuredevops_service_connection
-    awsRegion: eu-west-1
+    awsRegion: us-east-1
     awsEKSClusterName: sandbox
     projectName: webapp
